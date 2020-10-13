@@ -4,7 +4,9 @@ import logo from './logo.svg';
 import './App.css';
 import BarChart from './shared/bargraph/Bargraph';
 import BarchartGrouped from './shared/BarchartGrouped/BarchartGrouped';
+import BarchartGroupedTime from './shared/BarchartGroupedTime/BarchartGroupedTime';
 import {history} from './history'
+const data3 = require('./sampledata3.json')
 const data2 = require('./sampledata2.json')
 const data1 = require('./sampledata.json')
 function App() {
@@ -17,6 +19,12 @@ function App() {
               data={data2}
                 history={history}
             ></BarchartGrouped>
+          </Route>
+           <Route path="/groupTime">
+            <BarchartGroupedTime
+              data={data3}
+                history={history}
+            ></BarchartGroupedTime>
           </Route>
           <Route path="/">
             <BarChart

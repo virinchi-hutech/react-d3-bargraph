@@ -113,6 +113,7 @@ class BarChart extends Component<BarChartProps, BarChartState> {
                 <button onClick={() => { this.parseData("2019") }}>2019</button>
                 <button onClick={() => { this.parseData("2020") }}>2020</button>
                 <button onClick={() => { this.props.history.push('/group') }}>Show all</button>
+                <button onClick={() => { this.props.history.push('/groupTime') }}>Time series</button>
                 <div id="chart"></div>
             </>
         )

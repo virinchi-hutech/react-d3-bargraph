@@ -1,5 +1,5 @@
 import React, { useEffect, Component } from 'react'
-import './BarchartGrouped.css'
+import './BarchartGroupedTime.css'
 import * as d3 from 'd3';
 
 interface BarchartGroupedProps {
@@ -8,25 +8,51 @@ interface BarchartGroupedProps {
 }
 
 interface BarchartGroupedState {
-    node: any;
-    height: number;
-    width: number;
-    svg?: any;
-    total: Function;
-    yearList: any;
+    fruits: any;
+    months: any;
+    monthsToggle: any;
+    fruitsToggle: any;
 }
 
-class BarchartGrouped extends Component<BarchartGroupedProps, BarchartGroupedState> {
+class BarchartGroupedTime extends Component<BarchartGroupedProps, BarchartGroupedState> {
     state = {
-        node: null,
-        height: 0,
-        width: 0,
-        svg: null,
-        total: (str: any): any => { },
-        yearList: [2014],
+        fruits: [],
+        months: [],
+        monthsToggle: [],
+        fruitsToggle: [],
     }
     componentDidMount() {
-        this.drawChart()
+        this.setState({
+            fruitsToggle: Object.keys(this.props.data[0]).filter((item: string) => item !== 'name'),
+            monthsToggle: this.props.data.map((item: any) => { return item.name.trim() })
+        })
+        setTimeout(() => {
+            this.drawChart()
+            var _fruits = Object.keys(this.props.data[0]).filter((item: string) => item !== 'name').map((item: string) => { return this.createFruitToggleElement(item) })
+            var _months = this.props.data.map((item: any) => { return item.name }).map((item: string) => { return this.createMonthToggleElement(item) })
+            this.setState({
+                fruits: _fruits,
+                months: _months
+            })
+        }, 300)
+
+    }
+
+    createFruitToggleElement = (item) => {
+        return (
+            <>
+                <input type="checkbox" defaultChecked={this.state.fruitsToggle.includes(item.trim())} onClick={(event) => { this.toggleFruit(event, item) }} />
+                <label > {item}</label>
+            </>
+        )
+    }
+    createMonthToggleElement = (item) => {
+        return (
+            <>
+                <input type="checkbox" defaultChecked={this.state.monthsToggle.includes(item.trim())} onClick={(event) => { this.toggleMonth(event, item) }} />
+                <label > {item}</label>
+            </>
+        )
     }
     componentDidUpdate() {
         // this.initDiagram(400, 600)
@@ -38,9 +64,12 @@ class BarchartGrouped extends Component<BarchartGroupedProps, BarchartGroupedSta
 
 
     drawChart() {
-        var data = this.props.data.map((d: any) => {
+        var data = this.props.data.filter((item: any) => {
+            console.log(this.state.monthsToggle, item.name, this.state.monthsToggle.includes(item.name));
+            return this.state.monthsToggle.includes(item.name)
+        }).map((d: any) => {
             var _temp = { name: d.name }
-            this.state.yearList.forEach((i: any) => {
+            this.state.fruitsToggle.forEach((i: any) => {
                 _temp = {
                     ..._temp,
                     [i]: d[i]
@@ -48,6 +77,8 @@ class BarchartGrouped extends Component<BarchartGroupedProps, BarchartGroupedSta
             })
             return _temp
         })
+        console.log(data);
+
         var svg = d3.select("svg"),
             margin = { top: 20, right: 20, bottom: 30, left: 40 },
             width = +svg.attr("width") - margin.left - margin.right,
@@ -92,7 +123,7 @@ class BarchartGrouped extends Component<BarchartGroupedProps, BarchartGroupedSta
             .attr("fill", (d: any) => { return z(d.key); })
             .append("svg")
             .attr("height", 10)
-            
+
 
         g.append("g")
             .attr("class", "axis")
@@ -139,16 +170,16 @@ class BarchartGrouped extends Component<BarchartGroupedProps, BarchartGroupedSta
         d3.select("#chart").html("");
     }
 
-    toggleYear = (event, year: number) => {
+    toggleMonth = (event, str: string) => {
         d3.select("svg").html("");
         if (event.target.checked) {
             this.setState({
-                yearList: [...this.state.yearList, year]
+                monthsToggle: [...this.state.monthsToggle, str]
             })
 
         } else {
             this.setState({
-                yearList: this.state.yearList.filter((item: number) => item !== year)
+                monthsToggle: this.state.monthsToggle.filter((item: string) => item !== str)
             })
 
         }
@@ -158,30 +189,41 @@ class BarchartGrouped extends Component<BarchartGroupedProps, BarchartGroupedSta
         }, 500)
     }
 
+    toggleFruit = (event, str: string) => {
+
+        d3.select("svg").html("");
+        if (event.target.checked) {
+            this.setState({
+                fruitsToggle: [...this.state.fruitsToggle, str]
+            })
+
+        } else {
+            this.setState({
+                fruitsToggle: this.state.fruitsToggle.filter((item: string) => item !== str)
+            })
+
+        }
+        setTimeout(() => {
+            this.drawChart()
+        }, 500)
+    }
     render() {
         return (
             <>
-                <div id="chart">
-                    <button onClick={() => { this.props.history.push('/') }}>Simple View</button>
-                    <input defaultChecked={this.state.yearList.includes(2020)} type="checkbox" onClick={(event) => { this.toggleYear(event, 2020) }} />
-                    <label > 2020</label>
-                    <input defaultChecked={this.state.yearList.includes(2019)} type="checkbox" onClick={(event) => { this.toggleYear(event, 2019) }} />
-                    <label > 2019</label>
-                    <input defaultChecked={this.state.yearList.includes(2018)} type="checkbox" onClick={(event) => { this.toggleYear(event, 2018) }} />
-                    <label > 2018</label>
-                    <input defaultChecked={this.state.yearList.includes(2017)} type="checkbox" onClick={(event) => { this.toggleYear(event, 2017) }} />
-                    <label > 2017</label>
-                    <input defaultChecked={this.state.yearList.includes(2016)} type="checkbox" onClick={(event) => { this.toggleYear(event, 2016) }} />
-                    <label > 2016</label>
-                    <input defaultChecked={this.state.yearList.includes(2015)} type="checkbox" onClick={(event) => { this.toggleYear(event, 2015) }} />
-                    <label > 2015</label>
-                    <input defaultChecked={this.state.yearList.includes(2014)} type="checkbox" onClick={(event) => { this.toggleYear(event, 2014) }} />
-                    <label > 2014</label>
-                    <button onClick={() => { this.props.history.push('/groupTime') }}>Time Series View</button>
+
+                <div className="chart-opts">
+                    <button onClick={() => { this.props.history.push('/') }}>simple view</button>
+                    <button onClick={() => { this.props.history.push('/group') }}>group view</button>
+                </div>
+                <div className="chart-opts">
+                    {this.state.months}
+                </div>
+                <div className="chart-opts">
+                    {this.state.fruits}
                 </div>
                 <svg width="1200" height="700"></svg>
             </>
         )
     }
 }
-export default BarchartGrouped
+export default BarchartGroupedTime

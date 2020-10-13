@@ -1,0 +1,120 @@
+[
+    {
+        "banana": " $ 0.96 m",
+        "apple": " $ 0.89 m",
+        "orange": " $ 1.11 m",
+        "papaya": " $ 1.06 m",
+        "grapes": " $ 1.26 m",
+        "pineapple": " $ 1.40 m",
+        "watermilon": " $ 1.00 m",
+        "name": "jan"
+    },
+    {
+        "banana": " $ 1.55 m",
+        "apple": " $ 1.12 m",
+        "orange": " $ 2.00 m",
+        "papaya": " $ 1.98 m",
+        "grapes": " $ 2.35 m",
+        "pineapple": " $ 2.10 m",
+        "watermilon": " $ 1.60 m",
+        "name": "feb"
+    },
+    {
+        "banana": " $ 0.80 m",
+        "apple": " $ 1.22 m",
+        "orange": " $ 2.20 m",
+        "papaya": " $ 0.90 m",
+        "grapes": " $ 1.10 m",
+        "pineapple": " $ 1.20 m",
+        "watermilon": " $ 0.80 m",
+        "name": "mar"
+    },
+    {
+        "banana": " $ 0.96 m",
+        "apple": " $ 0.89 m",
+        "orange": " $ 1.11 m",
+        "papaya": " $ 1.06 m",
+        "grapes": " $ 1.26 m",
+        "pineapple": " $ 1.40 m",
+        "watermilon": " $ 1.00 m",
+        "name": "apr"
+    },
+    {
+        "banana": " $ 1.55 m",
+        "apple": " $ 1.12 m",
+        "orange": " $ 2.00 m",
+        "papaya": " $ 1.98 m",
+        "grapes": " $ 2.35 m",
+        "pineapple": " $ 2.10 m",
+        "watermilon": " $ 1.60 m",
+        "name": "may"
+    },
+    {
+        "banana": " $ 0.80 m",
+        "apple": " $ 1.22 m",
+        "orange": " $ 2.20 m",
+        "papaya": " $ 0.90 m",
+        "grapes": " $ 1.10 m",
+        "pineapple": " $ 1.20 m",
+        "watermilon": " $ 0.80 m",
+        "name": "june"
+    },{
+        "banana": " $ 0.96 m",
+        "apple": " $ 0.89 m",
+        "orange": " $ 1.11 m",
+        "papaya": " $ 1.06 m",
+        "grapes": " $ 1.26 m",
+        "pineapple": " $ 1.40 m",
+        "watermilon": " $ 1.00 m",
+        "name": "jul"
+    },
+    {
+        "banana": " $ 1.55 m",
+        "apple": " $ 1.12 m",
+        "orange": " $ 2.00 m",
+        "papaya": " $ 1.98 m",
+        "grapes": " $ 2.35 m",
+        "pineapple": " $ 2.10 m",
+        "watermilon": " $ 1.60 m",
+        "name": "aug"
+    },
+    {
+        "banana": " $ 0.80 m",
+        "apple": " $ 1.22 m",
+        "orange": " $ 2.20 m",
+        "papaya": " $ 0.90 m",
+        "grapes": " $ 1.10 m",
+        "pineapple": " $ 1.20 m",
+        "watermilon": " $ 0.80 m",
+        "name": "sept"
+    },{
+        "banana": " $ 0.96 m",
+        "apple": " $ 0.89 m",
+        "orange": " $ 1.11 m",
+        "papaya": " $ 1.06 m",
+        "grapes": " $ 1.26 m",
+        "pineapple": " $ 1.40 m",
+        "watermilon": " $ 1.00 m",
+        "name": "oct"
+    },
+    {
+        "banana": " $ 1.55 m",
+        "apple": " $ 1.12 m",
+        "orange": " $ 2.00 m",
+        "papaya": " $ 1.98 m",
+        "grapes": " $ 2.35 m",
+        "pineapple": " $ 2.10 m",
+        "watermilon": " $ 1.60 m",
+        "name": "nov"
+    },
+    {
+        "banana": " $ 0.80 m",
+        "apple": " $ 1.22 m",
+        "orange": " $ 2.20 m",
+        "papaya": " $ 0.90 m",
+        "grapes": " $ 1.10 m",
+        "pineapple": " $ 1.20 m",
+        "watermilon": " $ 0.80 m",
+        "name": "dec"
+    }
+]
