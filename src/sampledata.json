@@ -1,0 +1,142 @@
+{
+    "2014": [
+        {
+            "name": "banana",
+            "sales": " $ 0.96 m",
+            "wastage": " $ 0.10 m",
+            "year": "2014"
+        },
+        {
+            "name": "apple",
+            "sales": " $ 1.55 m",
+            "wastage": " $ 0.40 m",
+            "year": "2014"
+        },
+        {
+            "name": "orange",
+            "sales": " $ 0.80 m",
+            "wastage": " $ 0.20 m",
+            "year": "2014"
+        }
+    ],
+    "2015": [
+        {
+            "name": "banana",
+            "sales": " $ 0.89 m",
+            "wastage": " $ 0.20 m",
+            "year": "2015"
+        },
+        {
+            "name": "apple",
+            "sales": " $ 1.12 m",
+            "wastage": " $ 0.40 m",
+            "year": "2015"
+        },
+        {
+            "name": "orange",
+            "sales": " $ 1.22 m",
+            "wastage": " $ 0.22 m",
+            "year": "2015"
+        }
+    ],
+    "2016": [
+        {
+            "name": "banana",
+            "sales": " $ 1.11 m",
+            "wastage": " $ 0.20 m",
+            "year": "2016"
+        },
+        {
+            "name": "apple",
+            "sales": " $ 2.00 m",
+            "wastage": " $ 0.40 m",
+            "year": "2016"
+        },
+        {
+            "name": "orange",
+            "sales": " $ 2.20 m",
+            "wastage": " $ 0.40 m",
+            "year": "2016"
+        }
+    ],
+    "2017": [
+        {
+            "name": "banana",
+            "sales": " $ 1.06 m",
+            "wastage": " $ 0.10 m",
+            "year": "2017"
+        },
+        {
+            "name": "apple",
+            "sales": " $ 1.98 m",
+            "wastage": " $ 0.50 m",
+            "year": "2017"
+        },
+        {
+            "name": "orange",
+            "sales": " $ 0.90 m",
+            "wastage": " $ 0.40 m",
+            "year": "2017"
+        }
+    ],
+    "2018": [
+        {
+            "name": "banana",
+            "sales": " $ 1.26 m",
+            "wastage": " $ 0.40 m",
+            "year": "2018"
+        },
+        {
+            "name": "apple",
+            "sales": " $ 2.35 m",
+            "wastage": " $ 0.90 m",
+            "year": "2018"
+        },
+        {
+            "name": "orange",
+            "sales": " $ 1.10 m",
+            "wastage": " $ 0.40 m",
+            "year": "2018"
+        }
+    ],
+    "2019": [
+        {
+            "name": "banana",
+            "sales": " $ 1.40 m",
+            "wastage": " $ 0.90 m",
+            "year": "2019"
+        },
+        {
+            "name": "apple",
+            "sales": " $ 2.10 m",
+            "wastage": " $ 0.92 m",
+            "year": "2019"
+        },
+        {
+            "name": "orange",
+            "sales": " $ 1.20 m",
+            "wastage": " $ 0.42 m",
+            "year": "2019"
+        }
+    ],
+    "2020": [
+        {
+            "name": "banana",
+            "sales": " $ 1.00 m",
+            "wastage": " $ 0.92 m",
+            "year": "2020"
+        },
+        {
+            "name": "apple",
+            "sales": " $ 1.60 m",
+            "wastage": " $ 0.94 m",
+            "year": "2020"
+        },
+        {
+            "name": "orange",
+            "sales": " $ 0.80 m",
+            "wastage": " $ 0.30 m",
+            "year": "2020"
+        }
+    ]
+}
